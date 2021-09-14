@@ -62,51 +62,115 @@
 
       </header>
       <main>
+
+        <section class="Material-contact-section section-padding section-dark">
+          <div class="container">
+              <div class="row">
+                  <!-- Section Titile -->
+                  <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                      <h1 class="section-title">¡Escribenos!</h1>
+                  </div>
+              </div>
+              <div class="row">
+                  <!-- Section Titile -->
+                  <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <p>¿Quieres preguntar sobre un modelo en específico?</p>
+                    <p>¿Te gustaría recibir más info sobre nuestras campañas?</p>
+                    <p>¿Tienes algún reclamo o sugerencia para nosotros?</p>
+                    <p>Completa este formulario y te daremos la bienvenida a la familia virtual de Franco. Recibimos todas tus dudas y las respondemos en menos de 24 horas.</p>
+                    <div class="find-widget">
+                     Horario:  Lunes a Viernes de 9:00 am a 6:00 pm
+                    </div>
+                    <div class="find-widget">
+                     Dirección: <a href="#">Rio de
+                      Janeiro 300 (Caballito)</a>
+                    </div>
+                    <div class="find-widget">
+                      Whatsapp:  <a href="#">+ 879-890-9767</a>
+                    </div>
+                  </div>
+                  <!-- contact form -->
+                  <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+                      <form class="shake" role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
+                          <!-- Name -->
+                          <div class="form-group label-floating">
+                            <label class="control-label" for="name">Nombre</label>
+                            <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
+                            <div class="help-block with-errors"></div>
+                          </div>
+                          <!-- email -->
+                          <div class="form-group label-floating">
+                            <label class="control-label" for="email">Email</label>
+                            <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
+                            <div class="help-block with-errors"></div>
+                          </div>
+                          <!-- Subject -->
+                          <div class="form-group label-floating">
+                            <label class="control-label">Asunto</label>
+                            <input class="form-control" id="msg_subject" type="text" name="subject" required data-error="Please enter your message subject">
+                            <div class="help-block with-errors"></div>
+                          </div>
+                          <!-- Message -->
+                          <div class="form-group label-floating">
+                              <label for="message" class="control-label">Mensaje</label>
+                              <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                          <!-- Form Submit -->
+                          <div class="form-submit mt-5">
+                            <button type="button" class="btn btn-dark">Enviar</button>
+                              <div id="msgSubmit" class="h3 text-center hidden"></div>
+                              <div class="clearfix"></div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+        </section>
         
         <h2>Preguntas Comunes</h2>
         <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  ¿Tienen tarifas comodas?
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>Tenemos precios para todxs.</strong> 
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                ¿Tienen tarifas comodas?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Tenemos precios para todxs.</strong> 
                   Damos la bienvenida a todas las razas de perros y gatos. Sabemos que nuestros clientes tienen una canasta económica promedio.
-                  Así que no te preocupes, contamos con diversas tarifas que se adaptan a ti.
-                  </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  ¿Cuál es el costo del Delivery?
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>Tu primer delivery es gratis.</strong>
-                  Estamos asociados con diferentes apps de delivery. Tú eliges tu app favorita de delivery. Cada app tiene una tarifa distinta.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                 ¿Cuál es su horario presencial?
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>Te esperamos de Lunes a Viernes.</strong> 
-                Trabajamos en un horario de 9am a 6pm. Nuestras campañas de salud y estética se realizan los domingos.
-                Cualquier cambio de horario se compartirá en nuestras redes sociales.
-                </div>
-              </div>
+                  Así que no te preocupes, contamos con diversas tarifas que se adaptan a ti.</div>
             </div>
           </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                ¿Cuál es el costo del Delivery?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Tu primer delivery es gratis.</strong>
+                  Estamos asociados con diferentes apps de delivery. Tú eliges tu app favorita de delivery. Cada app tiene una tarifa distinta.
+                </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                ¿Cuál es su horario presencial?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Te esperamos de Lunes a Viernes.</strong> 
+                Trabajamos en un horario de 9am a 6pm. Nuestras campañas de salud y estética se realizan los domingos.
+                Cualquier cambio de horario se compartirá en nuestras redes sociales.
+            </div>
+          </div>
+        </div>
+
       </main>
 </body>
 </html>
