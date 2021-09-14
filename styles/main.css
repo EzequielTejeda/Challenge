@@ -20,3 +20,7 @@
 .franco{
     width: 100%;
 }
+
+.background{
+    background-image: url("../assets/background.jpg")
+}
