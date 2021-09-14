@@ -43,13 +43,8 @@ const app = Vue.createApp({
           };
           this.cosasdecompra.push(cosa);
         }
-        producto.stock -- ;
       },
       eliminarmedicina(producto){
-        let cosa = this.medicina.filter(
-          miembro => miembro._id == producto._id
-        )[0];
-        cosa.stock += producto.stock  
         let index = 0
         this.cosasdecompra.forEach((product,i)=>{
           product._id == producto._id ? (index = i) : null
