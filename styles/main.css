@@ -66,3 +66,16 @@
     background-color: beige;
     text-align: center;
 }
+/* CÓDIGO EZE */
+.farmacia_background{
+    background-image: linear-gradient(
+        75deg,
+        rgba(9, 210, 236, 0.7),
+        rgba(7, 252, 252, 0.616)
+        );
+}
+.tienda_container{
+    background-color: beige;
+    height: 40vh;
+}
+/* ------------------------------------- */
