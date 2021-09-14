@@ -22,7 +22,7 @@ const app = Vue.createApp({
     methods: {
       // aca separdo los juguetes de los medicamentos.
       serparador(array) {
-        this.jueguetes = array.filter((member) => member.tipo == "Juguete");
+        this.jueguetes = array.filter((member) => member.tipo == "Juguete");    
         this.medicina = array.filter((miembro) => miembro.tipo === "Medicamento");
       },
       addcarrito(producto) {
