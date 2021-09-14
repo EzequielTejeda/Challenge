@@ -7,9 +7,16 @@
     text-align: center;
 }
 
+.about-section{
+    display: flex;
+    padding-top: 5%;
+}
 .about-us{
     text-align: left;
-    padding-top: 5%;
     padding-left: 5%;
     padding-right: 5%;
+}
+
+.franco{
+    width: 100%;
 }
