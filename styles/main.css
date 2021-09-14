@@ -13,12 +13,16 @@
 }
 .about-us{
     text-align: left;
-    padding-left: 5%;
+    padding-top: 3%;
+    padding-left: 3%;
     padding-right: 5%;
+    margin-left: 5%;
+    background-color:beige;
 }
 
 .franco{
-    width: 100%;
+    width: 30%;
+    margin-right: 5%;
 }
 
 .background{
