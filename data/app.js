@@ -27,7 +27,7 @@ const app = Vue.createApp({
       },
       addcarrito(producto) {
         let cosa = this.cosasdecompra.filter(
-          (miembro) => miembro._id == producto._id
+          (miembro) => miembro._id === producto._id
         )[0];
         if (cosa != undefined) {
           cosa.cant++;
@@ -43,13 +43,8 @@ const app = Vue.createApp({
           };
           this.cosasdecompra.push(cosa);
         }
-        producto.stock -- ;
       },
       eliminarmedicina(producto){
-        let cosa = this.medicina.filter(
-          miembro => miembro._id == producto._id
-        )[0];
-        cosa.stock += producto.stock  
         let index = 0
         this.cosasdecompra.forEach((product,i)=>{
           product._id == producto._id ? (index = i) : null
@@ -64,9 +59,6 @@ const app = Vue.createApp({
       totaldecarrito(){
         return this.cosasdecompra.reduce((accumulador,string)=>accumulador + string.cant * string.precio,0)
       }
-  
-  
-  
     },
   });
   let cosas = app.mount("#app");
