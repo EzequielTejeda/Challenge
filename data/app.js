@@ -27,7 +27,7 @@ const app = Vue.createApp({
       },
       addcarrito(producto) {
         let cosa = this.cosasdecompra.filter(
-          (miembro) => miembro._id == producto._id
+          (miembro) => miembro._id === producto._id
         )[0];
         if (cosa != undefined) {
           cosa.cant++;
@@ -64,9 +64,6 @@ const app = Vue.createApp({
       totaldecarrito(){
         return this.cosasdecompra.reduce((accumulador,string)=>accumulador + string.cant * string.precio,0)
       }
-  
-  
-  
     },
   });
   let cosas = app.mount("#app");
