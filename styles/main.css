@@ -202,4 +202,20 @@
   .canvas-resume-list{
     display: flex;
     justify-content: space-around;
+    background-color: palevioletred;
+    padding-top: 3%;
+    margin: 3%;
+    border-radius: 15px;
+  }
+  .tarjeta-producto{
+    display: flex;
+    flex-flow: column;
+    background-color: beige;
+    border-radius: 15px 50px 30px;
+    margin: 2%;
+    padding: 3%;
+  }
+  .tarjetas-div{
+    display: flex;
+    flex-flow: column;
   }
