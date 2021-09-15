@@ -77,17 +77,18 @@
      </header>
      <!--Botón de Canvas-->
      <div class="d-flex justify-content-end sticky-top">
-       <button class="btn btn-primary canvas_boton" type="button" data-bs-toggle="offcanvas"
-         data-bs-target="#offcanvasMarket" aria-controls="offcanvasMarket"> <i class="bi bi-cart"></i>
+       <button class="btn btn-dark canvas_boton" type="button" data-bs-toggle="offcanvas"
+         data-bs-target="#offcanvasMarket" aria-controls="offcanvasMarket"> <i class="bi bi-cart4"></i>
          {{cantidaddecarrito}}
        </button>
      </div>
      <!--Canvas-->
      <main class="d-flex flex-column justify-content-evenly mb-5">
-       <div class="tienda-title col-10">
-         <h1>🐱¡Es hora de Jugar!🐶</h1>
-         <p>Tenemos alianzas con diferentes empresas latinas. Estas alianzas nos permiten importar una gran calidad de
-           juguetes para tu engreido.</p>
+       <div class="tienda-title col-10 rounded">
+         <h1>🐱Juguetería🐶</h1>
+         <h3>Para una mascota, ¡siempre es hora de jugar!</h3>
+         <p><strong>Tenemos alianzas con diferentes empresas latinas. Estas alianzas nos permiten importar una gran calidad de
+          juguetes para tu engreidx.</strong></p>
        </div>
        <div class="d-flex flex-row flex-wrap justify-content-around">
          <div v-for="producto in juguetes"
@@ -98,33 +99,33 @@
            <p class="px-3">Precio: ${{producto.precio}}</p>
            <div class="d-flex flex-row">
              <p class="px-3">Stock: {{producto.stock}}</p>
-             <p v-if="producto.stock > 5"></p>
-             <p class="bg-danger px-2 rounded fw-bold" v-else>¡Últimas unidades!</p>
+             <p v-if="5 > producto.stock && producto.stock > 0" class="bg-danger px-2 rounded fw-bold">¡Últimas unidades!</p>
+             <p v-else=""></p>
            </div>
            <button v-if="producto.stock > 0" class="btn btn-primary mb-3 mx-3" @click="addcarrito(producto)">Agregar al
              carrito</button>
-           <button v-else class="btn btn-danger mb-3" disabled>No stock</button>
+           <button v-else class="btn btn-danger mb-3" disabled>¡Sin stock por el momento 😢!</button>
          </div>
        </div>
 
        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMarket" data-bs-scroll="true"
          aria-labelledby="offcanvasExampleLabel">
          <div class="offcanvas-header">
-           <h5 id="offcanvasRightLabel">¡Tus Pedidos!</h5>
+          <h5 id="offcanvasRightLabel">Tus Pedidos 🛍️</h5>
            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
          </div>
-         <div>
-           <p>producto: {{cantidaddecarrito}}</p>
-           <p>total: {{totaldecarrito}}</p>
-         </div>
          <div class="offcanvas-body">
-           <div v-for="producto in cosasdecompra">
-             <p class="dropdown-item">{{producto.name}}</p>
-             <p class="dropdown-item">cant: {{producto.cant}}</p>
-             <p class="dropdown-item">precio x unidad: ${{producto.precio}}</p>
-             <button class="btn btn-primary" @click="eliminarjuguete(producto)">X</button>
+           <div v-for="producto in cosasdecompra" class="tarjeta-producto">
+           <button type="button" class="btn-close text-reset" @click="eliminarjuguete(producto)"></button>
+            <p class="dropdown-item"><strong>Producto(os):</strong> {{producto.name}}</p>
+            <p class="dropdown-item"><strong>Unidad(es):</strong> {{producto.cant}}</p>
+            <p class="dropdown-item"><strong>Precio:</strong> ${{producto.precio}}</p>
            </div>
          </div>
+         <div class="canvas-resume-list">
+          <p>🛒 Producto: {{cantidaddecarrito}}</p>
+          <p>💰 Total: ${{totaldecarrito}}</p>
+        </div>
         </div>
      </main>
      <div class="footer-color">
