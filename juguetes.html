@@ -15,65 +15,89 @@
   <div id="app">
     <header>
 
-        <div class="px-3 py-2 bg-white text-white">
-          <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-              <section>
-                <img src="./assets/logo.png" class="logo" alt="franco-Logo">
-              </section>
-              <section>
-                <h1 class="text-black">
-                    FRANCO
-                    <small class="text-muted">Pet Shop</small>
-                </h1>
-              </section>
-              <a href="#" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-              </a>
-    
-              <ul class="blackcolor nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                <li>
-                  <a href="./index.html" class="nav-link text-secondary">
-                    <svg class="bi d-block mx-auto mb-1" width="24" height="55"><use xlink:href="#home"/></svg>
-                    Inicio
-                  </a>
-                </li>
-                <li>
-                  <a href="./juguetes.html" class="nav-link text-black">
-                    <svg class="bi d-block mx-auto mb-1" width="24" height="55"><use xlink:href="#speedometer2"/></svg>
-                    Juguetes
-                  </a>
-                </li>
-                <li>
-                  <a href="./farmacia.html" class="nav-link text-black">
-                    <svg class="bi d-block mx-auto mb-1" width="24" height="55"><use xlink:href="#table"/></svg>
-                    Farmacia
-                  </a>
-                </li>
-                <li>
-                  <a href="./contacto.html" class="nav-link text-black">
-                    <svg class="bi d-block mx-auto mb-1" width="24" height="55"><use xlink:href="#grid"/></svg>
-                    Contacto
-                  </a>
-                </li>
-              </ul>
-            </div>
+      <div class="px-3 py-2 bg-white text-white">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <section>
+              <img src="./assets/logo.png" class="logo" alt="franco-Logo">
+            </section>
+            <section>
+              <h1 class="text-black">
+                FRANCO
+                <small class="text-muted">Pet Shop</small>
+              </h1>
+            </section>
+            <a href="#" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                <use xlink:href="#bootstrap" />
+              </svg>
+            </a>
+
+            <!-- NAV NUEVA (EZE) -->
+            <nav class="navbar navbar-expand navbar-light fw-bolder">
+              <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item mx-2">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                      <a class="nav-link active" aria-current="page" href="farmacia.html">Farmacia</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                      <a class="nav-link" href="juguetes.html">Juguetes</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                      <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                  </ul>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      carrito:
+                      <div class="dropdown-iten">
+                        <p>producto : {{cantidaddecarrito}}</p>
+                        <p>total : {{totaldecarrito}}</p>
+                      </div>
+                    </button>
+                    <div class="dropdown-menu">
+                      <div v-for="producto in cosasdecompra">
+                        <p class="dropdown-item">{{producto.name}}</p>
+                        <p class="dropdown-item">cant:{{producto.cant}}</p>
+                        <p class="dropdown-item">precio:{{producto.precio}}</p>
+                        <span class="btn" @click="eliminarmedicina(producto)">X</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <!-- NAV NUEVA (EZE) --------------------------------------------------->
           </div>
         </div>
+      </div>
+    </header>
 
-      </header>
-      <main>
-        <div class="tienda-title">
-          <h1>🐱¡Es hora de Jugar!🐶</h1>
-          <p>Tenemos alianzas con diferentes empresas latinas. Estas alianzas nos permiten importar una gran calidad de juguetes para tu engreido</p>
-        </div>
-        <div class="tienda-title">
-          <p>Página web en desarrollo...</p>
-          <img src="./assets/cargando.gif" alt="" srcset="">
-        </div>
-      </main>
-        <div class="footer-color">
-        <footer class="py-5">
+
+    <main>
+      <div class="tienda-title">
+        <h1>🐱¡Es hora de Jugar!🐶</h1>
+        <p>Tenemos alianzas con diferentes empresas latinas. Estas alianzas nos permiten importar una gran calidad de juguetes para tu engreido</p>
+      </div>
+      <div class="tienda-title">
+        <p>Página web en desarrollo...</p>
+        <img src="./assets/cargando.gif" alt="" srcset="">
+      </div>
+      </div>
+    </main>
+
+
+    <div class="footer-color">
+    <footer class="py-5">
           <div class="row">
       
             <div>
@@ -99,7 +123,6 @@
           </div>
         </footer>
       </div>
-  </div>
   <script src="https://unpkg.com/vue@next"></script>
     <script src="./data/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
