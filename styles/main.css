@@ -91,7 +91,15 @@
     text-align: center;
     background-color:rgb(250, 165, 183);
 }
-
+.map{
+    width: 80%;
+}
+.titulo-map{
+    padding-bottom: 3%;
+}
+.cat{
+    width: 80%;
+}
 /*CÓDIGO FORM CONTACT*/
 
 .form-logo{
