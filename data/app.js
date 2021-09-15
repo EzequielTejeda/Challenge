@@ -43,6 +43,7 @@ const app = Vue.createApp({
           };
           this.cosasdecompra.push(cosa);
         }
+      producto.stock--;
       },
       eliminarmedicina(producto){
         let index = 0
