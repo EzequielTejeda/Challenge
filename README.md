@@ -19,11 +19,11 @@ El challenge se realizó desde el 9 de Setiembre al 14 de Setiembre de manera in
 
 Equipo de Front-End Development que cumplió este challenge:
 
-* 🇦🇷 @rdaniel-ctrl
-* 🇦🇷 @Pangoli23
-* 🇵🇪 @IsabelaSanchez
-* 🇦🇷 @francosanna95
-* 🇦🇷 @MigueMaisares
+* 🇦🇷 [@rdaniel-ctrl](https://github.com/rdaniel-ctrl)
+* 🇦🇷 [@Pangoli23](https://github.com/Pangoli23)
+* 🇵🇪 [@IsabelaSanchez](https://github.com/IsabelaSanchez)
+* 🇦🇷 [@francosanna95](https://github.com/francosanna95)
+* 🇦🇷 [@MigueMaisares](https://github.com/MigueMaisares)
 
 Todos los miembros del equipo son parte de los cohort FS022 y FS023 de Mindhub.
 
@@ -43,7 +43,6 @@ Para crear este proyecto recibimos los siguientes requerimientos del cliente:
 6. Y te pido algo: tendrias que lograr que en aquellos articulos (medicamentos o juguetes) que tienen menos de 5 (cinco) unidades de stock aparezca un cartel rojo que diga “Ultimas unidades!!!” asi fomentamos la venta!! 
 
 Se utilizó la API:https://apipetshop.herokuapp.com/api/articulos
-[https://apipetshop.herokuapp.com/api/articulos](https://apipetshop.herokuapp.com/api/articulos)
 
 ### MVP
 Vista Web del producto:
