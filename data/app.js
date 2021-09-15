@@ -15,23 +15,21 @@ const app = Vue.createApp({
         this.datos = data.response;
         this.serparador(this.datos);
         this.addcarrito();
+        this.realizarcompra(this.cosasdecompra)
       })
       .catch((err) => console.error(err.message));
   },
   // metodo para hacer
   methods: {
     // aca separdo los juguetes de los medicamentos.
-    serparador(array) {
-      this.juguetes = array.filter((member) => member.tipo == "Juguete"); 
-      this.medicina = array.filter((miembro) => miembro.tipo === "Medicamento");
-    },
+   
     addcarrito(producto) {
       let cosa = this.cosasdecompra.filter(
         (miembro) => miembro._id === producto._id
       )[0];
       if (cosa != undefined) {
-        cosa.cant++;
-      } else {
+        cosa.stock > cosa.cant ? cosa.cant ++ : null
+      } else{
         let cosa = {
           _id: producto._id,
           name: producto.nombre,
@@ -39,24 +37,22 @@ const app = Vue.createApp({
           imagen: producto.imagen,
           precio: producto.precio,
           tipo: producto.tipo,
+          stock:producto.stock,
           cant: 1,
         };
         this.cosasdecompra.push(cosa);
       }
-      // producto.stock--;
     },
     eliminarmedicina(producto) {
-      let cosa = this.cosasdecompra.filter(
-        (miembro) => miembro._id === producto._id
-      )[0];
-      // cosa.stock += producto.stock 
       let index = 0;
       this.cosasdecompra.forEach((product, i) =>
         product._id === producto._id ? (index = i) : null
       );
       this.cosasdecompra.splice(0,1)
-      this.addcarrito(producto.stock) --
     },
+    // realizarcompra(array){
+    // return array.stock --  
+    // }  
   },
   computed: {
     cantidaddecarrito() {
@@ -70,6 +66,10 @@ const app = Vue.createApp({
         (accumulador, string) => accumulador + string.cant * string.precio,
         0
       );
+    },
+    serparador() {
+      this.juguetes = this.datos.filter((member) => member.tipo == "Juguete"); 
+      this.medicina = this.datos.filter((miembro) => miembro.tipo === "Medicamento");
     },
   },
 });

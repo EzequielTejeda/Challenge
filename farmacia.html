@@ -102,6 +102,7 @@
         <div>
           <p>producto :{{cantidaddecarrito}}</p>
           <p>total : {{totaldecarrito}}</p>
+          <button class="btn btn-primary" @click = "realizarcompra">comprar</button>
         </div>
         <div class="offcanvas-body">
           <div v-for="producto in cosasdecompra">
