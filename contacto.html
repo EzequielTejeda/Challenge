@@ -56,7 +56,7 @@
                          <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
                        </li>
                      </ul>
-                     <div class="dropdown">
+                     <!-- <div class="dropdown">
                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                          data-bs-toggle="dropdown" aria-expanded="false">
                          carrito:
@@ -73,7 +73,7 @@
                            <span class="btn" @click="eliminarmedicina(producto)">X</span>
                          </div>
                        </div>
-                     </div>
+                     </div> -->
                    </div>
                  </div>
                </nav>
@@ -82,19 +82,24 @@
          </div>
        </header>
        <main>
+        <div class="tienda-title col-10">
+          <h1>✍️¡Matengamos el Contacto!📧</h1>
+          <p>¿Tienes dudas sobre nuestros servicios? ¿Deseas contactarte con nosotrxs?
+            Revisa nuestra sección de preguntas frecuentes o anímate a escribirnos.
+          </p>
+        </div>
          <section class="contact-form">
            <div class="container">
              <div class="row">
                <!-- Section Titile -->
                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
-                 <h1 class="section-title">¡Escribenos!</h1>
+                 <h2 class="contact-title">¡Escribenos!📝</h2>
                </div>
              </div>
              <div class="row">
                <!-- Section Titile -->
                <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
-                 <div class="form-logo-questions">
-                   <img src="./assets/form-logo.png" class="form-logo" alt="" srcset="">
+                 <div>
                    <div>
                     <p>¿Quieres preguntar sobre un modelo en específico?</p>
                     <p>¿Te gustaría recibir más info sobre nuestras campañas?</p>
@@ -160,7 +165,7 @@
          </section>
 
          <div class="accordion" id="accordionExample">
-           <h2 id="preguntas">Preguntas Comunes</h2>
+           <h2 class="contact-title">Preguntas Comunes</h2>
            <div class="accordion-item">
              <h2 class="accordion-header" id="headingOne">
                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
