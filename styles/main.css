@@ -115,10 +115,9 @@
 .form-logo-questions{
     display: flex;
 }
-/* ESTILO PROVISIONAL DEL CARRITO */
 .canvas_boton{
-    width: 20% !important;
-    margin-left: 40% !important;
+    width: 3.5rem !important;
+    height: 3rem !important;
 }
 .questions-div{
     margin: 3%;
@@ -219,4 +218,11 @@
   .tarjetas-div{
     display: flex;
     flex-flow: column;
+
+}
+  @media (max-width: 1000px){
+    .canvas_boton{
+        width: 2.5rem !important;
+        height: 4rem !important;
+    }
   }
