@@ -114,12 +114,8 @@
       <!--Canvas-->
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMarket" data-bs-scroll="true"  aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-          <h5 id="offcanvasRightLabel">¡Tus Pedidos!</h5>
+          <h5 id="offcanvasRightLabel">Tus Pedidos 🛍️</h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div>
-          <p>producto :{{cantidaddecarrito}}</p>
-          <p>total : {{totaldecarrito}}</p>
         </div>
         <div class="offcanvas-body">
           <div v-for="producto in cosasdecompra">
@@ -127,6 +123,10 @@
             <p class="dropdown-item">cant: {{producto.cant}}</p>
             <p class="dropdown-item">precio x unidad: ${{producto.precio}}</p>
             <button class="btn btn-primary" @click="eliminarmedicina(producto)">X</button>
+          </div>
+          <div class="canvas-resume-list">
+            <p>Producto: {{cantidaddecarrito}}</p>
+            <p>Total: ${{totaldecarrito}}</p>
           </div>
         </div>
       </div>
