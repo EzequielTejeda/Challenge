@@ -120,9 +120,9 @@
         <div class="offcanvas-body tarjetas-div">
           <div v-for="producto in cosasdecompra" class="tarjeta-producto">
             <button type="button" class="btn-close text-reset" @click="eliminarmedicina(producto)"></button>
-            <p class="dropdown-item">{{producto.name}}</p>
-            <p class="dropdown-item">Unidad(es): {{producto.cant}}</p>
-            <p class="dropdown-item">Precio x Unidad: ${{producto.precio}}</p>
+            <p class="dropdown-item"><strong>Producto(os):</strong> {{producto.name}}</p>
+            <p class="dropdown-item"><strong>Unidad(es):</strong> {{producto.cant}}</p>
+            <p class="dropdown-item"><strong>Precio:</strong> ${{producto.precio}}</p>
           </div>
           <div class="canvas-resume-list">
             <p>🛒 Producto: {{cantidaddecarrito}}</p>

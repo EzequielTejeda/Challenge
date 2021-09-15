@@ -214,6 +214,7 @@
     border-radius: 15px 50px 30px;
     margin: 2%;
     padding: 3%;
+    box-sizing: border-box;
   }
   .tarjetas-div{
     display: flex;
