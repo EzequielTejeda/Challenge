@@ -60,6 +60,17 @@ const app = Vue.createApp({
         product._id == producto._id ? (index = i) : null
       })
       this.cosasdecompra.splice(index,1)
+    },
+    eliminarjuguete(producto){
+      let cosa = this.juguetes.filter(
+        miembro => miembro._id == producto._id
+      )[0];
+      cosa.stock += producto.stock  
+      let index = 0
+      this.cosasdecompra.forEach((product,i)=>{
+        product._id == producto._id ? (index = i) : null
+      })
+      this.cosasdecompra.splice(index,1)
     }
   
   },
