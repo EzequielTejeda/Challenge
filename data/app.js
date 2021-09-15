@@ -2,7 +2,7 @@ const app = Vue.createApp({
     data() {
       return {
         datos: {},
-        jueguetes: [], //las cosas de los juguetes
+        juguetes: [], //las cosas de los juguetes //solamente cambie la palabra juguete que estaba mal escrita, no toqué nada más (EZE)
         medicina: [], //las cosas de la farmacia
         cosasdecompra: [], //guardo aca las compras
       };
@@ -22,7 +22,7 @@ const app = Vue.createApp({
     methods: {
       // aca separdo los juguetes de los medicamentos.
       serparador(array) {
-        this.jueguetes = array.filter((member) => member.tipo == "Juguete");    
+        this.juguetes = array.filter((member) => member.tipo == "Juguete"); //solamente cambie la palabra juguete que estaba mal escrita, no toqué nada más (EZE)
         this.medicina = array.filter((miembro) => miembro.tipo === "Medicamento");
       },
       addcarrito(producto) {

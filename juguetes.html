@@ -15,91 +15,118 @@
   <div id="app">
     <header>
 
-        <div class="px-3 py-2 bg-white text-white">
-          <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-              <section>
-                <img src="./assets/logo.png" class="logo" alt="franco-Logo">
-              </section>
-              <section>
-                <h1 class="text-black">
-                    FRANCO
-                    <small class="text-muted">Pet Shop</small>
-                </h1>
-              </section>
-              <a href="#" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-              </a>
-    
-              <ul class="blackcolor nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                <li>
-                  <a href="./index.html" class="nav-link text-secondary">
-                    <svg class="bi d-block mx-auto mb-1" width="24" height="55"><use xlink:href="#home"/></svg>
-                    Inicio
-                  </a>
-                </li>
-                <li>
-                  <a href="./juguetes.html" class="nav-link text-black">
-                    <svg class="bi d-block mx-auto mb-1" width="24" height="55"><use xlink:href="#speedometer2"/></svg>
-                    Juguetes
-                  </a>
-                </li>
-                <li>
-                  <a href="./farmacia.html" class="nav-link text-black">
-                    <svg class="bi d-block mx-auto mb-1" width="24" height="55"><use xlink:href="#table"/></svg>
-                    Farmacia
-                  </a>
-                </li>
-                <li>
-                  <a href="./contacto.html" class="nav-link text-black">
-                    <svg class="bi d-block mx-auto mb-1" width="24" height="55"><use xlink:href="#grid"/></svg>
-                    Contacto
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-    </header>
-      <main>
-        <div class="tienda-title">
-          <h1>🐱¡Es hora de Jugar!🐶</h1>
-          <p>Tenemos alianzas con diferentes empresas latinas. Estas alianzas nos permiten importar una gran calidad de juguetes para tu engreido</p>
-        </div>
-        <div class="tienda-title">
-          <p>Página web en desarrollo...</p>
-          <img src="./assets/cargando.gif" alt="" srcset="">
-        </div>
-      </main>
-        <div class="footer-color">
-        <footer class="py-5">
-          <div class="row">
-      
-            <div>
-              <form>
-                <h5>Suscribete a nuestro newsletter</h5>
-                <p>Te enviamos noticias mensuales de ofertas, campañas y más</p>
-                <div class="d-flex w-100 gap-2">
-                  <label for="newsletter1" class="visually-hidden">Email</label>
-                  <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                  <button class="btn btn-dark" type="button">Subscribe</button>
+      <div class="px-3 py-2 bg-white text-white">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <section>
+              <a href="./index.html"><img src="./assets/logo.png" class="logo" alt="franco-Logo"></a>
+            </section>
+            <section>
+              <h1 class="text-black">
+                FRANCO
+                <small class="text-muted">Pet Shop</small>
+              </h1>
+            </section>
+            <a href="#" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                <use xlink:href="#bootstrap" />
+              </svg>
+            </a>
+            <nav class="navbar navbar-expand navbar-light fw-bolder">
+              <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item mx-2">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                      <a class="nav-link" href="farmacia.html">Farmacia</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                      <a class="nav-link active" aria-current="page" href="juguetes.html">Juguetes</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                      <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                  </ul>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      carrito:
+                      <div class="dropdown-iten">
+                        <p>producto : {{cantidaddecarrito}}</p>
+                        <p>total : {{totaldecarrito}}</p>
+                      </div>
+                    </button>
+                    <div class="dropdown-menu">
+                      <div v-for="producto in cosasdecompra">
+                        <p class="dropdown-item">{{producto.name}}</p>
+                        <p class="dropdown-item">cant:{{producto.cant}}</p>
+                        <p class="dropdown-item">precio:{{producto.precio}}</p>
+                        <span class="btn" @click="eliminarmedicina(producto)">X</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </form>
-            </div>
+              </div>
+            </nav>
           </div>
-      
-          <div class="d-flex justify-content-between py-4 my-4 border-top">
-            <p>FRANCO, Pet Shop 2021 | Todos los derechos Reservados</p>
-            <ul class="redes">
-              <i class="bi bi-twitter"></i>
-              <i class="bi bi-instagram"></i>
-              <i class="bi bi-facebook"></i>
-            </ul>
+        </div>
+      </div>
+    </header>
+    <main class="d-flex flex-column justify-content-evenly mb-5">
+      <div class="tienda-title col-10">
+        <h2>🐱¡Es hora de Jugar!🐶</h2>
+        <p>Tenemos alianzas con diferentes empresas latinas. Estas alianzas nos permiten importar una gran calidad de juguetes para tu engreido.</p>
+      </div>
+      <div class="d-flex flex-row flex-wrap justify-content-around">
+        <div v-for="producto in juguetes"
+          class="d-flex flex-column col-3 rounded justify-content-between tienda_container m-3 col-10 col-md-5 col-lg-4 col-xl-3 col-xxl-2">
+          <img :src="producto.imagen" class="img-fluid pt-3 px-3" alt="imagen demostrativa">
+          <h3 class="px-3">{{producto.nombre}}</h3>
+          <p class="px-3">{{producto.descripcion}}</p>
+          <p class="px-3">Precio: ${{producto.precio}}</p>
+          <div class="d-flex flex-row">
+            <p class="px-3">Stock: {{producto.stock}}</p>
+            <p v-if="producto.stock > 5"></p>
+            <p class="bg-danger px-2 rounded fw-bold" v-else>¡Últimas unidades!</p>
           </div>
-        </footer>
+          <button v-if="producto.stock > 0" class="btn btn-primary mb-3 mx-3" @click="addcarrito(producto)">Agregar al carrito</button>
+          <button v-else class="btn btn-danger mb-3" disabled>No stock</button>
+        </div>
       </div>
   </div>
+  </main>
+    <div class="footer-color">
+      <footer class="pt-5 pb-2">
+        <div class="row">
+          <div>
+            <form>
+              <h5>Suscribete a nuestro newsletter</h5>
+              <p>Te enviamos noticias mensuales de ofertas, campañas y más</p>
+              <div class="d-flex w-100">
+                <label for="newsletter1" class="visually-hidden">Email</label>
+                <input id="newsletter1" type="text" class="form-control me-2" placeholder="Email address">
+                <button class="btn btn-dark" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+ 
+        <div class="d-flex justify-content-between pt-4 mt-4 border-top">
+          <p>FRANCO, Pet Shop 2021 | Todos los derechos Reservados</p>
+          <ul class="redes">
+            <i class="bi bi-twitter px-2"></i><!--LES DI UN POCO DE PADDING A LOS BOTONES (EZE)-->
+              <i class="bi bi-instagram px-2"></i><!--LES DI UN POCO DE PADDING A LOS BOTONES (EZE)-->
+              <i class="bi bi-facebook px-2"></i><!--LES DI UN POCO DE PADDING A LOS BOTONES (EZE)-->
+          </ul>
+        </div>
+      </footer>
+      </div>
   <script src="https://unpkg.com/vue@next"></script>
     <script src="./data/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
