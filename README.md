@@ -19,11 +19,11 @@ El challenge se realizó desde el 9 de Setiembre al 14 de Setiembre de manera in
 
 Equipo de Front-End Development que cumplió este challenge:
 
-🇦🇷 @rdaniel-ctrl
-🇦🇷 @Pangoli23
-🇵🇪 @IsabelaSanchez
-🇦🇷 @francosanna95
-🇦🇷 @MigueMaisares
+* 🇦🇷 @rdaniel-ctrl
+* 🇦🇷 @Pangoli23
+* 🇵🇪 @IsabelaSanchez
+* 🇦🇷 @francosanna95
+* 🇦🇷 @MigueMaisares
 
 Todos los miembros del equipo son parte de los cohort FS022 y FS023 de Mindhub.
 
