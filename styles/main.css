@@ -110,7 +110,9 @@
 .form-logo-questions{
     display: flex;
 }
-
+.questions-div{
+    margin: 3%;
+}
 .contact-form{
     padding-top: 2%;
     padding-left: 2%;
@@ -121,4 +123,8 @@
     padding-bottom: 2%;
     margin-bottom: 2%;
     background-color:rgb(250, 165, 183);
+}
+.contact-form-emoji{
+    margin-top: 3%;
+    font-size: 400%;
 }
