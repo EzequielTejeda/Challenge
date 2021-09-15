@@ -30,7 +30,7 @@ const app = Vue.createApp({
           (miembro) => miembro._id === producto._id
         )[0];
         if (cosa != undefined) {
-          cosa.cant++;
+          cosa.cant++
         } else {
           let cosa = {
             _id: producto._id,
@@ -41,8 +41,9 @@ const app = Vue.createApp({
             tipo: producto.tipo,
             cant: 1,
           };
-          this.cosasdecompra.push(cosa);
+          this.cosasdecompra.unshift(cosa);
         }
+      producto.stock--;
       },
       eliminarmedicina(producto){
         let index = 0
