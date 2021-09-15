@@ -9,9 +9,7 @@
   <!-- CSS only -->
   <link rel="stylesheet" href="./styles/main.css">
   <!-- bootstrap css -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
 </head>
 
@@ -58,7 +56,7 @@
                       <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
                   </ul>
-                  <div class="dropdown">
+                  <!-- <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                       data-bs-toggle="dropdown" aria-expanded="false">
                       carrito:
@@ -75,7 +73,7 @@
                         <span class="btn" @click="eliminarmedicina(producto)">X</span>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </nav>
@@ -102,38 +100,42 @@
             <p v-if="producto.stock > 5"></p>
             <p class="bg-danger px-2 rounded fw-bold" v-else>¡Últimas unidades!</p>
           </div>
-          <button v-if="producto.stock > 0" class="btn btn-primary mb-3 mx-3" @click="addcarrito(producto)">Agregar al carrito</button>
+          <button v-if="producto.stock > 0" class="btn btn-primary mb-3 mx-3" @click="addcarrito(producto)">Agregar al
+            carrito</button>
           <button v-else class="btn btn-danger mb-3" disabled>No stock</button>
         </div>
       </div>
   </div>
   </main>
-    <div class="footer-color">
-      <footer class="pt-5 pb-2">
-        <div class="row">
-          <div>
-            <form>
-              <h5>Suscribete a nuestro newsletter</h5>
-              <p>Te enviamos noticias mensuales de ofertas, campañas y más</p>
-              <div class="d-flex w-100">
-                <label for="newsletter1" class="visually-hidden">Email</label>
-                <input id="newsletter1" type="text" class="form-control me-2" placeholder="Email address">
-                <button class="btn btn-dark" type="button">Subscribe</button>
-              </div>
-            </form>
-          </div>
+  <div class="footer-color">
+    <footer class="pt-5 pb-2">
+      <div class="row">
+        <div>
+          <form>
+            <h5>Suscribete a nuestro newsletter</h5>
+            <p>Te enviamos noticias mensuales de ofertas, campañas y más</p>
+            <div class="d-flex w-100">
+              <label for="newsletter1" class="visually-hidden">Email</label>
+              <input id="newsletter1" type="text" class="form-control me-2" placeholder="Email address">
+              <button class="btn btn-dark" type="button">Subscribe</button>
+            </div>
+          </form>
         </div>
- 
-        <div class="d-flex justify-content-between pt-4 mt-4 border-top">
-          <p>FRANCO, Pet Shop 2021 | Todos los derechos Reservados</p>
-          <ul class="redes">
-            <i class="bi bi-twitter px-2"></i><!--LES DI UN POCO DE PADDING A LOS BOTONES (EZE)-->
-              <i class="bi bi-instagram px-2"></i><!--LES DI UN POCO DE PADDING A LOS BOTONES (EZE)-->
-              <i class="bi bi-facebook px-2"></i><!--LES DI UN POCO DE PADDING A LOS BOTONES (EZE)-->
-          </ul>
-        </div>
-      </footer>
-    </div>
+      </div>
+
+      <div class="d-flex justify-content-between pt-4 mt-4 border-top">
+        <p>FRANCO, Pet Shop 2021 | Todos los derechos Reservados</p>
+        <ul class="redes">
+          <i class="bi bi-twitter px-2"></i>
+          <!--LES DI UN POCO DE PADDING A LOS BOTONES (EZE)-->
+          <i class="bi bi-instagram px-2"></i>
+          <!--LES DI UN POCO DE PADDING A LOS BOTONES (EZE)-->
+          <i class="bi bi-facebook px-2"></i>
+          <!--LES DI UN POCO DE PADDING A LOS BOTONES (EZE)-->
+        </ul>
+      </div>
+    </footer>
+  </div>
   </div>
   </div>
   <!-- js bootstrap -->
@@ -141,8 +143,6 @@
   <!-- vue  -->
   <script src="https://unpkg.com/vue@next"></script>
   <script src="./data/app.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
   </script>
 </body>
 
