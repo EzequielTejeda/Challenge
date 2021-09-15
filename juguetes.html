@@ -11,13 +11,11 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
  </head>
 
  <body class="background">
    <div id="app">
      <header>
-
        <div class="px-3 py-2 bg-white text-white">
          <div class="container">
            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -26,8 +24,10 @@
              </section>
              <section>
                <h1 class="text-black">
-                 FRANCO
-                 <small class="text-muted">Pet Shop</small>
+                 <a href="./index.html" class="inicio-logo">
+                   FRANCO
+                   <small class="text-muted">Pet Shop</small>
+                 </a>
                </h1>
              </section>
              <a href="#" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
@@ -65,7 +65,7 @@
      </header>
      <main class="d-flex flex-column justify-content-evenly mb-5">
        <div class="tienda-title col-10">
-         <h2>🐱¡Es hora de Jugar!🐶</h2>
+         <h1>🐱¡Es hora de Jugar!🐶</h1>
          <p>Tenemos alianzas con diferentes empresas latinas. Estas alianzas nos permiten importar una gran calidad de
            juguetes para tu engreido.</p>
        </div>
@@ -83,7 +83,7 @@
            </div>
            <button v-if="producto.stock > 0" class="btn btn-primary mb-3 mx-3" @click="addcarrito(producto)">Agregar al
              carrito</button>
-           <button v-else class="btn btn-danger mb-3" disabled>¡Sin stock!</button>
+           <button v-else class="btn btn-danger mb-3" disabled>No stock</button>
          </div>
        </div>
    </div>
@@ -107,12 +107,15 @@
        <div class="d-flex justify-content-between pt-4 mt-4 border-top">
          <p>FRANCO, Pet Shop 2021 | Todos los derechos Reservados</p>
          <ul class="redes">
-           <i class="bi bi-twitter px-2"></i>
-           <!--LES DI UN POCO DE PADDING A LOS BOTONES (EZE)-->
-           <i class="bi bi-instagram px-2"></i>
-           <!--LES DI UN POCO DE PADDING A LOS BOTONES (EZE)-->
-           <i class="bi bi-facebook px-2"></i>
-           <!--LES DI UN POCO DE PADDING A LOS BOTONES (EZE)-->
+           <li><i class="bi bi-twitter px-2"></i>
+             <!--LES DI UN POCO DE PADDING A LOS BOTONES (EZE)-->
+           </li>
+           <li><i class="bi bi-instagram px-2"></i>
+             <!--LES DI UN POCO DE PADDING A LOS BOTONES (EZE)-->
+           </li>
+           <li><i class="bi bi-facebook px-2"></i>
+             <!--LES DI UN POCO DE PADDING A LOS BOTONES (EZE)-->
+           </li>
          </ul>
        </div>
      </footer>

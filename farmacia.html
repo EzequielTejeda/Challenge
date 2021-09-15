@@ -11,6 +11,7 @@
   <!-- bootstrap css -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 </head>
 
@@ -21,13 +22,15 @@
       <div class="px-3 py-2 bg-white text-white">
         <div class="container">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <section>
+             <section>
               <a href="./index.html"><img src="./assets/logo.png" class="logo" alt="franco-Logo"></a>
             </section>
             <section>
               <h1 class="text-black">
+                <a href="./index.html" class="inicio-logo">
                 FRANCO
                 <small class="text-muted">Pet Shop</small>
+               </a>
               </h1>
             </section>
             <a href="#" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
@@ -67,7 +70,7 @@
 
     <main class="d-flex flex-column justify-content-evenly mb-5">
       <div class="tienda-title col-10">
-        <h1>🐱¿Spa? ¿Paticure? ¡Lo tenemos todo!🐶</h1>
+        <h2>🐱¿Spa? ¿Paticure? ¡Lo tenemos todo!🐶</h2>
         <p>Tenemos alianzas con diferentes empresas latinas.
           Estas alianzas nos permiten importar una gran calidad de artículos de farmacia para tu engreido</p>
       </div>
@@ -84,15 +87,19 @@
             <p class="bg-danger px-2 rounded fw-bold" v-else>¡Últimas unidades!</p>
           </div>
           <button v-if="producto.stock > 0" class="btn btn-primary mb-3 mx-3" @click="addcarrito(producto)">Agregar al
-            carrito</button>
-          <button v-else class="btn btn-danger mb-3" disabled>¡Sin stock!</button>
+            carrito <i class="bi bi-plus-lg"></i> </button>
+          <button v-else class="btn btn-danger mb-3" disabled>No stock</button>
         </div>
       </div>
 
-      <button class="btn btn-primary canvas_boton" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Carrito</button>
+      <!--Botón de Canvas-->
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMarket"
+        aria-controls="offcanvasMarket">
+        Tus Pedidos <i class="bi bi-cart"></i> {{cantidaddecarrito}}
 
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      </button>
+      <!--Canvas-->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMarket" data-bs-scroll="true"  aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
           <h5 id="offcanvasRightLabel">¡Tus Pedidos!</h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -100,17 +107,20 @@
         <div>
           <p>producto :{{cantidaddecarrito}}</p>
           <p>total : {{totaldecarrito}}</p>
+          <button class="btn btn-primary" @click = "realizarcompra">comprar</button>
         </div>
         <div class="offcanvas-body">
           <div v-for="producto in cosasdecompra">
             <p class="dropdown-item">{{producto.name}}</p>
             <p class="dropdown-item">cant: {{producto.cant}}</p>
-            <p class="dropdown-item">precio: ${{producto.precio}}</p>
-            <span class="btn" @click="eliminarmedicina(producto)">X</span>
+            <p class="dropdown-item">precio x unidad: ${{producto.precio}}</p>
+            <button class="btn btn-primary" @click="eliminarmedicina(producto)">X</button>
           </div>
         </div>
       </div>
     </main>
+
+
     <div class="footer-color">
       <footer class="pt-5 pb-2">
         <div class="row">
@@ -146,7 +156,6 @@
   <!-- vue  -->
   <script src="https://unpkg.com/vue@next"></script>
   <script src="./data/app.js"></script>
-  </script>
 </body>
 
 </html>
