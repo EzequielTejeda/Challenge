@@ -48,7 +48,7 @@ const app = Vue.createApp({
         };
         this.cosasdecompra.push(cosa);
       }
-      producto.stock -- ;
+      producto.stock--;
     },
     eliminarmedicina(producto){
       let cosa = this.medicina.filter(
