@@ -1,7 +1,7 @@
 # 🐱 FRANCO Pet Shop 🐶 - Mindhub Bootcamp Front-End Challenge 1
 
 ## #️⃣ Índice
-1. Preámbulo [Link a 1️⃣ Preámbulo](#1️⃣-Preámbulo)
+1. [Preámbulo](#1️⃣-Preámbulo)
 2. Equipo de Desarrollo
 3. Resumen del Proyecto
 4. Feedback
