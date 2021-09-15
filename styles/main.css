@@ -1,6 +1,10 @@
 .logo{
     width: 5rem;
 }
+.inicio-logo:link, .inicio-logo:visited, .inicio-logo:active {
+    text-decoration:none;
+    color: black;
+}
 
 .background{
     background-image: url("../assets/background.jpg")
