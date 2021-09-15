@@ -70,7 +70,7 @@
 
     <main class="d-flex flex-column justify-content-evenly mb-5">
       <div class="tienda-title col-10">
-        <h1>🐱¿Spa? ¿Paticure? ¡Lo tenemos todo!🐶</h1>
+        <h2>🐱¿Spa? ¿Paticure? ¡Lo tenemos todo!🐶</h2>
         <p>Tenemos alianzas con diferentes empresas latinas.
           Estas alianzas nos permiten importar una gran calidad de artículos de farmacia para tu engreido</p>
       </div>
@@ -107,13 +107,14 @@
         <div>
           <p>producto :{{cantidaddecarrito}}</p>
           <p>total : {{totaldecarrito}}</p>
+          <button class="btn btn-primary" @click = "realizarcompra">comprar</button>
         </div>
         <div class="offcanvas-body">
           <div v-for="producto in cosasdecompra">
             <p class="dropdown-item">{{producto.name}}</p>
             <p class="dropdown-item">cant: {{producto.cant}}</p>
-            <p class="dropdown-item">precio: ${{producto.precio}}</p>
-            <span class="btn" @click="eliminarmedicina(producto)">X</span>
+            <p class="dropdown-item">precio x unidad: ${{producto.precio}}</p>
+            <button class="btn btn-primary" @click="eliminarmedicina(producto)">X</button>
           </div>
         </div>
     </main>
@@ -157,7 +158,6 @@
   <!-- vue  -->
   <script src="https://unpkg.com/vue@next"></script>
   <script src="./data/app.js"></script>
-  </script>
 </body>
 
 </html>
