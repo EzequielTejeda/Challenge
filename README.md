@@ -42,6 +42,9 @@ Para crear este proyecto recibimos los siguientes requerimientos del cliente:
 5. Después habría otros dos páginas, una “Farmacia” y otra “Juguetes” ahí tenés que poner algunas fotos ilustrativas (de farmacia o de juguetes) y en cada una tenés que mostrar artículos. Para esto tenés que hacer un pedido a una API que te va a devolver un JSON con aproximadamente 15 artículos, algunos juguetes y otros medicamentos. Los medicamentos los tenes que mostrar en la página que corresponde y los juguetes en la otra. Hacele un cuadradito donde esté la imagen (te viene en ese JSON la dirección de la imagen), el nombre del artículo, el precio, hacemelo bonito!!! :) Como si fuera un MercadoLibre, viste? Asi, como una grilla con articulos, colores, linda letra, esmerate!
 6. Y te pido algo: tendrias que lograr que en aquellos articulos (medicamentos o juguetes) que tienen menos de 5 (cinco) unidades de stock aparezca un cartel rojo que diga “Ultimas unidades!!!” asi fomentamos la venta!! 
 
+Se utilizó la API:https://apipetshop.herokuapp.com/api/articulos
+[https://apipetshop.herokuapp.com/api/articulos](https://apipetshop.herokuapp.com/api/articulos)
+
 ### MVP
 Vista Web del producto:
 
