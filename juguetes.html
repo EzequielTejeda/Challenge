@@ -56,24 +56,6 @@
                        <a class="nav-link" href="contacto.html">Contacto</a>
                      </li>
                    </ul>
-                   <div class="dropdown">
-                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                       carrito:
-                       <div class="dropdown-iten">
-                         <p>producto : {{cantidaddecarrito}}</p>
-                         <p>total : {{totaldecarrito}}</p>
-                       </div>
-                     </button>
-                     <div class="dropdown-menu">
-                       <div v-for="producto in cosasdecompra">
-                         <p class="dropdown-item">{{producto.name}}</p>
-                         <p class="dropdown-item">cant:{{producto.cant}}</p>
-                         <p class="dropdown-item">precio:{{producto.precio}}</p>
-                         <span class="btn" @click="eliminarmedicina(producto)">X</span>
-                       </div>
-                     </div>
-                   </div>
                  </div>
                </div>
              </nav>

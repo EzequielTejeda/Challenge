@@ -6,18 +6,18 @@
     background-image: url("../assets/background.jpg")
 }
 
-.contact-form, #accordionExample{
+#accordionExample{
     padding-top: 2%;
     padding-left: 2%;
     padding-right: 5%;
     margin-top: 3%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 8%;
+    margin-right: 8%;
     padding-bottom: 2%;
     margin-bottom: 2%;
     background-color:beige;
 }
-#preguntas{
+.contact-title{
     margin-bottom: 3%;
     text-align: center;
 }
@@ -114,4 +114,23 @@
 .canvas_boton{
     width: 20% !important;
     margin-left: 40% !important;
+}
+.questions-div{
+    margin: 3%;
+}
+.contact-form{
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 5%;
+    margin-top: 3%;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+
+    background-color:rgb(250, 165, 183);
+}
+.contact-form-emoji{
+    margin-top: 3%;
+    font-size: 400%;
 }
