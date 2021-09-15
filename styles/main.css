@@ -2,14 +2,6 @@
     width: 5rem;
 }
 
-.map{
-    padding: 3%;
-    margin:5%;
-    text-align: center;
-    background-color:beige;
-}
-
-
 .background{
     background-image: url("../assets/background.jpg")
 }
@@ -91,4 +83,22 @@
 
 .titulo-about{
     padding: 1rem;
+}
+/*CÓDIGO Map*/
+.map-div{
+    margin: 3%;
+    padding: 4%;
+    text-align: center;
+    background-color:rgb(250, 165, 183);
+}
+
+/*CÓDIGO FORM CONTACT*/
+
+.form-logo{
+    width:30%;
+    margin-right: 2%;
+    margin-bottom: 5%;
+}
+.form-logo-questions{
+    display: flex;
 }
