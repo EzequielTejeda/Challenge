@@ -31,6 +31,7 @@ const app = Vue.createApp({
         )[0];
         if (cosa != undefined) {
           cosa.cant++;
+          cosa.precio= cosa.precio*cosa.cant;
         } else {
           let cosa = {
             _id: producto._id,
