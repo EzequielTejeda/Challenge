@@ -66,7 +66,7 @@ const app = Vue.createApp({
       let cosa = this.juguetes.filter(
         miembro => miembro._id == producto._id
       )[0];
-      cosa.stock += producto.stock  
+      cosa.stock += producto.cant 
       let index = 0
       this.cosasdecompra.forEach((product,i)=>{
         product._id == producto._id ? (index = i) : null
