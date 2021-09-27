@@ -19,7 +19,7 @@ El challenge se realizó desde el 9 de Setiembre al 14 de Setiembre de manera in
 
 Equipo de Front-End Development que cumplió este challenge:
 
-Líder del equipo: * 🇵🇪 [@IsabelaSanchez](https://github.com/IsabelaSanchez)
+Líder del equipo: 🇵🇪 [@IsabelaSanchez](https://github.com/IsabelaSanchez)
 
 * 🇦🇷 [@rdaniel-ctrl](https://github.com/rdaniel-ctrl)
 * 🇦🇷 [@Pangoli23](https://github.com/Pangoli23)
