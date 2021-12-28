@@ -22,7 +22,7 @@ Equipo de Front-End Development que cumplió este challenge:
 Líder del equipo: 🇵🇪 [@IsabelaSanchez](https://github.com/IsabelaSanchez)
 
 * 🇦🇷 [@rdaniel-ctrl](https://github.com/rdaniel-ctrl)
-* 🇦🇷 [@Pangoli23](https://github.com/Pangoli23)
+* 🇦🇷 [@EzequielTejeda](https://github.com/EzequielTejeda)
 * 🇦🇷 [@francosanna95](https://github.com/francosanna95)
 * 🇦🇷 [@MigueMaisares](https://github.com/MigueMaisares)
 
